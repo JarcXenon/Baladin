@@ -11,10 +11,10 @@ bbox = (s,w,n,e)
 condition = ["historic"]
 
 overpass_url = "http://overpass-api.de/api/interpreter"
-overpass_query = """[out:json];
-nwr{}{};
+overpass_query = f"""[out:json];
+nwr{condition}{bbox};
 out;
-""".format(condition, bbox)
+"""
 
 print(overpass_query)
 
